@@ -28,7 +28,7 @@ app.get('/', function(req, res) {
 app.get('/reports/bystate', function(req, res) {
 	let result = stateReports;
   	if(req.query.hasOwnProperty('keywords') && req.query.keywords !== "") {
-  		result = stateReports.filter(report => report.State === req.query.keywords);
+  		result = stateReports.filter(report => report.State.toLowerCase() === req.query.keywords.toLowerCase());
   	}
 
   	res.render('reportsearch', {reports: result});
