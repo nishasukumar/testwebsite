@@ -25,9 +25,9 @@ app.get('/', function(req, res) {
   	res.render('home');
 });
 
-app.get('/reports/byfacility', function(req, res) {
+app.get('/reports/bystate', function(req, res) {
 	let result = stateReports;
-  	if(req.query.hasOwnProperty('keywords') && req.query.tagQuery !== "") {
+  	if(req.query.hasOwnProperty('keywords') && req.query.keywords !== "") {
   		result = stateReports.filter(report => report.State === req.query.keywords);
   	}
 
