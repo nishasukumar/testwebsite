@@ -1,9 +1,10 @@
 # Example Website for UCLA Data Project Behind Bars
 
 ## How to run site
-Download repository onto Desktop. Then run the following commands:
+Run the following commands on terminal:
 ```
 cd Desktop
+git clone https://github.com/nishasukumar/testwebsite.git
 cd testwebsite
 node app.js
 ```  
